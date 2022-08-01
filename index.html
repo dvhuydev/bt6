@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <h4>Tìm số nguyên dương n nhỏ nhất sao cho 1 + 2 + … + n > 10000</h4>
+                <div class="form-body w-100" >
+                    <input type="number" class="w-100" name="Number" id="minNumber" placeholder="Don't input number in here">
+                </div>
+                <div class="form-group">
+                    <button onclick="findMin()" class="btn btn-warning my-2">
+                        Enter
+                    </button>
+                    <div id="results" class="alert alert-success">Min number: </div>
+                    <div id="resultsSum" class="alert alert-success">Sum number: </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <h5>Viết chương trình nhập vào 2 số x,n tính tổng:</h5>
+                <div class="form-group">
+                    <p>Phương trình là: S(n) = x + x^2 + x^3.... + x^n</p>
+                    <input id="xSecret" type="number" class="form-control col-8" placeholder="Input X" />
+                    <input id="nSecret" type="number" class="form-control my-2 col-8" placeholder="Input N" />
+                    <button onclick="sumBothsecret()" class="btn btn-warning my-2">
+                        Check
+                    </button>
+                    <div id="sumResults" class="alert alert-success">S(n) =</div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <h5>
+                    Viết chương trình nhập vào 2 số n tính Giai thừa: S3 = 1 * 2...*n
+                </h5>
+                <div class="form-group">
+                    <p>Giai thừa : 1 * 2 ... * n</p>
+                    <input id="factorial" type="number" class="form-control" placeholder="Input Number" />
+                    <button onclick="countFactorial()" class="btn btn-warning my-2">
+                        Count Factorial
+                    </button>
+                    <div id="factorialReults" class="alert alert-success">Factorial =</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="form-group">
+            <h5>
+                Viết chương trình in ra thẻ DIV chẵn lẻ (Lẻ màu xanh) (Chẵn màu đỏ)
+            </h5>
+            <div class="form-body">
+                <input type="number" name="" id="divNumber" placeholder="Input Number">
+            </div>
+            <button onclick="changeBackground()" class="btn btn-warning my-4">Enter</button>
+            <div class="alert alert-dark w-50">
+                <div id="backgroundUpdate" class="alert w-30" style="display: none"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/main.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
