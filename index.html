@@ -13,79 +13,108 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-5">
-                <h4>Tìm số nguyên dương n nhỏ nhất sao cho 1 + 2 + … + n > 10000</h4>
-                <div class="form-body w-100" >
-                    <input type="number" class="w-100" name="Number" id="minNumber" placeholder="Don't input number in here">
-                </div>
-                <div class="form-group">
-                    <button onclick="findMin()" class="btn btn-warning my-2">
-                        Enter
-                    </button>
-                    <div id="results" class="alert alert-success">Min number: </div>
-                    <div id="resultsSum" class="alert alert-success">Sum number: </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-5">
-                <h5>Viết chương trình nhập vào 2 số x,n tính tổng:</h5>
-                <div class="form-group">
-                    <p>Phương trình là: S(n) = x + x^2 + x^3.... + x^n</p>
-                    <input id="xSecret" type="number" class="form-control col-8" placeholder="Input X" />
-                    <input id="nSecret" type="number" class="form-control my-2 col-8" placeholder="Input N" />
-                    <button onclick="sumBothsecret()" class="btn btn-warning my-2">
-                        Check
-                    </button>
-                    <div id="sumResults" class="alert alert-success">S(n) =</div>
+            <div class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-ss1-tab" data-toggle="pill" data-target="#v-pills-ss1"
+                        type="button" role="tab" aria-controls="v-pills-ss1" aria-selected="true">Bài 1</button>
+                    <button class="nav-link" id="v-pills-ss2-tab" data-toggle="pill" data-target="#v-pills-ss2"
+                        type="button" role="tab" aria-controls="v-pills-ss2" aria-selected="false">Bài 2</button>
+                    <button class="nav-link" id="v-pills-ss3-tab" data-toggle="pill" data-target="#v-pills-ss3"
+                        type="button" role="tab" aria-controls="v-pills-ss3" aria-selected="false">Bài 3</button>
+                    <button class="nav-link" id="v-pills-ss4-tab" data-toggle="pill" data-target="#v-pills-ss4"
+                        type="button" role="tab" aria-controls="v-pills-ss4" aria-selected="false">Bài 4</button>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-ss1" role="tabpanel"
+                        aria-labelledby="v-pills-ss1-tab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-5 m-auto">
+                                    <h4>Tìm số nguyên dương n nhỏ nhất sao cho 1 + 2 + … + n > 10000</h4>
+                                    <div class="form-body w-100">
+                                        <input type="number" class="w-100" name="Number" id="minNumber"
+                                            placeholder="Don't input number in here">
+                                    </div>
+                                    <div class="form-group">
+                                        <button onclick="findMin()" class="btn btn-warning my-2">
+                                            Enter
+                                        </button>
+                                        <div id="results" class="alert alert-success">Min number: </div>
+                                        <div id="resultsSum" class="alert alert-success">Sum number: </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-ss2" role="tabpanel" aria-labelledby="v-pills-ss2-tab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-5 m-auto">
+                                    <h5>Viết chương trình nhập vào 2 số x,n tính tổng:</h5>
+                                    <div class="form-group">
+                                        <p>Phương trình là: S(n) = x + x^2 + x^3.... + x^n</p>
+                                        <input id="xSecret" type="number" class="form-control col-8"
+                                            placeholder="Input X" />
+                                        <input id="nSecret" type="number" class="form-control my-2 col-8"
+                                            placeholder="Input N" />
+                                        <button onclick="sumBothsecret()" class="btn btn-warning my-2">
+                                            Check
+                                        </button>
+                                        <div id="sumResults" class="alert alert-success">S(n) =</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-ss3" role="tabpanel" aria-labelledby="v-pills-ss3-tab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-5 m-auto">
+                                    <h5>
+                                        Viết chương trình nhập vào 2 số n tính Giai thừa: S3 = 1 * 2...*n
+                                    </h5>
+                                    <div class="form-group">
+                                        <p>Giai thừa : 1 * 2 ... * n</p>
+                                        <input id="factorial" type="number" class="form-control"
+                                            placeholder="Input Number" />
+                                        <button onclick="countFactorial()" class="btn btn-warning my-2">
+                                            Count Factorial
+                                        </button>
+                                        <div id="factorialReults" class="alert alert-success">Factorial =</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-ss4" role="tabpanel" aria-labelledby="v-pills-ss4-tab">
+                        <div class="container">
+                            <div class="form-group">
+                                <h5>
+                                    Viết chương trình in ra thẻ DIV chẵn lẻ (Lẻ màu xanh) (Chẵn màu đỏ)
+                                </h5>
+                                <div class="form-body">
+                                    <input type="number" name="" id="divNumber" placeholder="Input Number">
+                                </div>
+                                <button onclick="changeBackground()" class="btn btn-warning my-4">Enter</button>
+                                <div class="alert alert-dark w-50">
+                                    <div id="backgroundUpdate" class="alert w-30" style="display: none"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
- 
 
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-5">
-                <h5>
-                    Viết chương trình nhập vào 2 số n tính Giai thừa: S3 = 1 * 2...*n
-                </h5>
-                <div class="form-group">
-                    <p>Giai thừa : 1 * 2 ... * n</p>
-                    <input id="factorial" type="number" class="form-control" placeholder="Input Number" />
-                    <button onclick="countFactorial()" class="btn btn-warning my-2">
-                        Count Factorial
-                    </button>
-                    <div id="factorialReults" class="alert alert-success">Factorial =</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="container">
-        <div class="form-group">
-            <h5>
-                Viết chương trình in ra thẻ DIV chẵn lẻ (Lẻ màu xanh) (Chẵn màu đỏ)
-            </h5>
-            <div class="form-body">
-                <input type="number" name="" id="divNumber" placeholder="Input Number">
-            </div>
-            <button onclick="changeBackground()" class="btn btn-warning my-4">Enter</button>
-            <div class="alert alert-dark w-50">
-                <div id="backgroundUpdate" class="alert w-30" style="display: none"></div>
-            </div>
-        </div>
-    </div>
 
 
     <script src="./js/main.js"></script>
